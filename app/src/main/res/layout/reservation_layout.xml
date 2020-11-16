@@ -4,13 +4,15 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:id="@+id/layoutButton1"
     android:background="@drawable/bg2">
-    
+
     <RelativeLayout
         android:layout_weight="2"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
-
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutButton2"
+        android:layout_below="@id/layoutButton1">
 
         <TextView
             android:id="@+id/profile_tv"
@@ -24,46 +26,313 @@
             android:textSize="32sp"
             android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="392dp"
-            android:layout_height="561dp"
+        <ImageView
+            android:id="@+id/dropdown1_iv"
+            android:layout_width="35dp"
+            android:layout_height="26dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="9dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="460dp"
+            android:orientation="horizontal"
+            android:src="@drawable/dropdown" />
+
+        <ImageView
+            android:id="@+id/dropdown2_iv"
+            android:layout_width="35dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="360dp"
+            android:orientation="horizontal"
+            android:src="@drawable/dropdown" />
+
+        <ImageView
+            android:id="@+id/dropdown3_iv"
+            android:layout_width="35dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="260dp"
+            android:orientation="horizontal"
+            android:src="@drawable/dropdown" />
+
+        <ImageView
+            android:id="@+id/dropdown4_iv"
+            android:layout_width="35dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="160dp"
+            android:orientation="horizontal"
+            android:src="@drawable/dropdown" />
+
+        <LinearLayout
+            android:layout_width="600dp"
+            android:layout_height="570dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/asset_label_tv"
-                android:layout_width="65dp"
+                android:layout_width="355dp"
                 android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="328dp"
-                android:layout_marginBottom="528dp"
                 android:text="Asset"
-                android:textColor="#000050"
+                android:textColor="@color/blue"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/asset_dropdown"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="328dp"
+                android:backgroundTint="@color/white"
+                android:text="Gaming Monitor"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:startIconDrawable="@drawable/dropdown" />
 
             <TextView
                 android:id="@+id/quantity_label_tv"
-                android:layout_width="65dp"
+                android:layout_width="355dp"
                 android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="328dp"
                 android:text="Quantity"
-                android:textColor="#000050"
+                android:textColor="@color/blue"
                 android:textSize="20sp" />
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/quantity_dropdown"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="328dp"
+                android:backgroundTint="@color/white"
+                android:text="1"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/beginDate_label_tv"
+                android:layout_width="355dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="328dp"
+                android:text="Begin Date"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/beginDate_dropdown"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="328dp"
+                android:backgroundTint="@color/white"
+                android:text="25-08-2020"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/returnDate_label_tv"
+                android:layout_width="355dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="328dp"
+                android:text="Return Date"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/returnDate_dropdown"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="328dp"
+                android:backgroundTint="@color/white"
+                android:text="25-08-2020"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/description_label_tv"
+                android:layout_width="355dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="328dp"
+                android:text="Description"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/description_input"
+                android:layout_width="355dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:hint="Put your description here.." />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/reserve_btn"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="328dp"
+                android:backgroundTint="@color/blue"
+                android:text="RESERVE"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
     </RelativeLayout>
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <RelativeLayout
+        android:layout_weight="0"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:menu="@menu/bottom_navigation_menu" />
+        android:layout_height="75dp"
+        android:layout_below="@id/layoutButton2"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:id="@+id/home_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="340dp"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:id="@+id/home_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="341dp"
+            android:layout_marginBottom="12dp"
+            android:text="Home"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/reservation_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="239dp"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/reservation" />
+
+        <TextView
+            android:id="@+id/reservation_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="220dp"
+            android:layout_marginBottom="12dp"
+            android:text="Reservation"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/asset_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/asset" />
+
+        <TextView
+            android:id="@+id/asset_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="12dp"
+            android:text="Asset"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/profile_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="34dp"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/profile_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="12dp"
+            android:text="Profile"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+    </RelativeLayout>
 </LinearLayout>

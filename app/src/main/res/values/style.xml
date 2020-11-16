@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <style name="ClaraTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorAccent">@color/gray</item>
+        <item name="colorSecondary">@color/black</item>
+    </style>
 </resources>
