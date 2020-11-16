@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+    
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/profile_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Profile"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            />
+
+        <ImageButton
+            android:id="@+id/logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="21dp"
+            android:backgroundTint="#000050"
+            android:src="@drawable/logout1" />
+
+
+        <ImageView
+            android:id="@+id/profile_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="108dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="142dp"
+            android:layout_marginBottom="470dp"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="113dp"
+            android:layout_marginBottom="412dp"
+            android:text="Ilyas Yudhistira"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nrp_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="166dp"
+            android:layout_marginBottom="347dp"
+            android:text="3 D4 IT B"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/class_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="160dp"
+            android:layout_marginBottom="379dp"
+            android:text="12345678"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="272dp"
+            android:text="Reservation History"
+            android:textColor="#000050"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>
