@@ -25,7 +25,7 @@
         android:textStyle="bold"
         android:textSize="40sp"
         android:textAlignment="center"
-        android:textColor="#000050"
+        android:textColor="@color/blue"
         />
 
     <TextView
@@ -36,7 +36,7 @@
         android:text="Let's create your account!"
         android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="#1F1F1F"
+        android:textColor="@color/blue"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -51,9 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name"
-            android:backgroundTint="@color/white"
-            />
-
+            android:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,14 +61,11 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         app:startIconDrawable="@drawable/nrp">
-
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="NRP"
-            android:backgroundTint="@color/white"
-            />
-
+            android:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -86,7 +81,6 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:hint="Email" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -101,9 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:backgroundTint="@color/white"
-            />
-
+            android:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -118,9 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirm Password"
-            android:backgroundTint="@color/white"
-            />
-
+            android:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -132,8 +122,8 @@
         android:text="SIGN UP"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:backgroundTint="#000050"
-        />
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue" />
 
     <TextView
         android:layout_width="match_parent"
@@ -143,6 +133,5 @@
         android:text="Already have an account?Sign in"
         android:textSize="16sp"
         android:textAlignment="center"
-        android:textColor="#1F1F1F"
-        />
+        android:textColor="@color/blue" />
 </LinearLayout>
