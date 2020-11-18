@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/layoutButton1"
+    android:background="@drawable/bg3">
+
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/layoutButton2"
+        android:layout_below="@id/layoutButton1">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="240dp"
+            android:layout_marginBottom="580dp"
+            android:text="Hello, Fajar!"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/make_reservation_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="222dp"
+            android:layout_marginBottom="555dp"
+            android:text="Let's make a reservation."
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/profile1_iv"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="548dp"
+            android:src="@drawable/profile_white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="470dp"
+            android:text="Summary"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
+            <TableRow>
+                <ImageView
+                    android:id="@+id/waiting_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/red_circle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:text="Waiting for Approval"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
+            <TableRow>
+                <ImageView
+                    android:id="@+id/onReservation_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="240dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/yellow_circle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="240dp"
+                    android:text="On Reservation"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
+            <TableRow>
+                <ImageView
+                    android:id="@+id/returned_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="280dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/green_circle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="280dp"
+                    android:text="Returned"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
+            <TableRow>
+                <ImageView
+                    android:id="@+id/rejected_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/grey_circle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="320dp"
+                    android:text="Rejected"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="245dp"
+            android:text="Active Reservation"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/mic1_iv"
+            android:layout_width="94dp"
+            android:layout_height="83dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="295dp"
+            android:layout_marginBottom="157dp"
+            android:src="@drawable/mic" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="415dp"
+            android:text="Waiting for approval"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="190dp"
+            android:text="Microphone"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="175dp"
+            android:text="16 November 2020"
+            android:textColor="@color/gray"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="160dp"
+            android:text="3 units"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/mic2_iv"
+            android:layout_width="94dp"
+            android:layout_height="83dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="295dp"
+            android:layout_marginBottom="57dp"
+            android:src="@drawable/mic" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="515dp"
+            android:text="Waiting for approval"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="90dp"
+            android:text="Microphone"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="75dp"
+            android:text="16 November 2020"
+            android:textColor="@color/gray"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="60dp"
+            android:text="3 units"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@id/layoutButton2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/home_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="340dp"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:id="@+id/home_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="341dp"
+            android:layout_marginBottom="12dp"
+            android:text="Home"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/reservation_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="239dp"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/reservation" />
+
+        <TextView
+            android:id="@+id/reservation_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="220dp"
+            android:layout_marginBottom="12dp"
+            android:text="Reservation"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/asset_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/asset" />
+
+        <TextView
+            android:id="@+id/asset_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="12dp"
+            android:text="Asset"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/profile2_iv"
+            android:layout_width="43dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="34dp"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/profile_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="12dp"
+            android:text="Profile"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>
