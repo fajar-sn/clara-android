@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/layoutButton1"
-    android:background="@drawable/bg2"
-    >
+    android:background="@drawable/bg2">
 
     <TextView
         android:id="@+id/profile_tv"
@@ -30,19 +29,21 @@
             android:id="@+id/imageAsset_iv"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@drawable/image"
-            />
+            android:src="@drawable/image" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:text="Waiting for approval"/>
 
         <TextView
             android:id="@+id/label_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Microphone"
             android:textSize="30sp"
             android:textColor="@color/black"
@@ -53,14 +54,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Peminjaman ini untuk acara..."
-            android:textColor="@color/black"
-            />
+            android:textColor="@color/black" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
 
             <TableRow>
                 <TextView
@@ -78,55 +82,49 @@
                     android:layout_weight="1"
                     />
             </TableRow>
+
             <TableRow>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date created"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="26 November 2020"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
             </TableRow>
             <TableRow>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Start date"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="27 November 2020"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
             </TableRow>
             <TableRow>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Return date"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="29 November 2020"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
             </TableRow>
-
         </TableLayout>
 
         <TextView
@@ -134,49 +132,126 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Status Update"
             android:textColor="@color/blue"
             android:textSize="24sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
+            android:layout_marginEnd="10dp"
+            >
             <TableRow>
+                <ImageView
+                    android:id="@+id/onReservation_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/yellow_circle" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="On reservation"
+                    android:layout_marginTop="12dp"
+                    android:text="On Reservation"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
             </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Waiting for approval"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:layout_weight="1"
-                    />
-            </TableRow>
-
-
         </TableLayout>
 
-    </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
+            <TableRow>
+                <ImageView
+                    android:id="@+id/waiting_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/red_circle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Waiting for Approval"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            >
+            <TableRow>
+                <ImageView
+                    android:id="@+id/returned_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/green_circle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Returned"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            >
+            <TableRow>
+                <ImageView
+                    android:id="@+id/rejected_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/grey_circle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Rejected"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_below="@id/layoutButton2"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="6dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
@@ -202,7 +277,7 @@
             android:layout_marginEnd="341dp"
             android:layout_marginBottom="12dp"
             android:text="Home"
-            android:textColor="#000050"
+            android:textColor="@color/blue"
             android:textSize="15sp" />
 
         <ImageView
@@ -227,7 +302,7 @@
             android:layout_marginEnd="220dp"
             android:layout_marginBottom="12dp"
             android:text="Reservation"
-            android:textColor="#000050"
+            android:textColor="@color/blue"
             android:textSize="15sp" />
 
         <ImageView
@@ -252,7 +327,7 @@
             android:layout_marginEnd="131dp"
             android:layout_marginBottom="12dp"
             android:text="Asset"
-            android:textColor="#000050"
+            android:textColor="@color/blue"
             android:textSize="15sp" />
 
         <ImageView
@@ -277,7 +352,7 @@
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="12dp"
             android:text="Profile"
-            android:textColor="#000050"
+            android:textColor="@color/blue"
             android:textSize="15sp" />
     </RelativeLayout>
 
