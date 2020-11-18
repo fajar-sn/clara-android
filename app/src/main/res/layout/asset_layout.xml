@@ -5,43 +5,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/layoutButton1"
-    android:background="@drawable/bg2">
+    android:background="@drawable/bg2"
+    >
 
-    <RelativeLayout
-        android:layout_weight="2"
+    <TextView
+        android:id="@+id/profile_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/layoutButton2"
-        android:layout_below="@id/layoutButton1">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:text="Asset"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/profile_tv"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="591dp"
+        android:orientation="vertical">
+
+        <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="19dp"
-            android:text="Asset"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="600dp"
-            android:layout_height="570dp"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:orientation="vertical">
+            android:layout_marginTop="50dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
 
-
-        </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
     <RelativeLayout
-        android:layout_weight="0"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_below="@id/layoutButton2"
+        android:layout_weight="0"
         android:orientation="horizontal">
 
         <ImageView

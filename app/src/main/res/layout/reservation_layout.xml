@@ -5,234 +5,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/layoutButton1"
-    android:background="@drawable/bg2">
+    android:background="@drawable/bg2"
+    >
 
-    <RelativeLayout
-        android:layout_weight="2"
+    <TextView
+        android:id="@+id/profile_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/layoutButton2"
-        android:layout_below="@id/layoutButton1">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:text="Reservation"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/profile_tv"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="591dp"
+        android:orientation="vertical">
+
+        <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="19dp"
-            android:text="Reservation"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="50dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
 
-        <ImageView
-            android:id="@+id/dropdown1_iv"
-            android:layout_width="35dp"
-            android:layout_height="26dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="480dp"
-            android:orientation="horizontal"
-            android:src="@drawable/dropdown" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="410dp"
+            android:layout_marginEnd="16dp"
+            app:fabSize="normal"
+            android:backgroundTint="@color/blue"
+            android:src="@drawable/ic_baseline_add_24"/>
 
-        <ImageView
-            android:id="@+id/dropdown2_iv"
-            android:layout_width="35dp"
-            android:layout_height="26dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="380dp"
-            android:orientation="horizontal"
-            android:src="@drawable/dropdown" />
-
-        <ImageView
-            android:id="@+id/dropdown3_iv"
-            android:layout_width="35dp"
-            android:layout_height="26dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="280dp"
-            android:orientation="horizontal"
-            android:src="@drawable/dropdown" />
-
-        <ImageView
-            android:id="@+id/dropdown4_iv"
-            android:layout_width="35dp"
-            android:layout_height="26dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="180dp"
-            android:orientation="horizontal"
-            android:src="@drawable/dropdown" />
-
-        <LinearLayout
-            android:layout_width="600dp"
-            android:layout_height="570dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/asset_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Asset"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/asset_dropdown"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:backgroundTint="@color/white"
-                android:text="Gaming Monitor"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                app:startIconDrawable="@drawable/dropdown" />
-
-            <TextView
-                android:id="@+id/quantity_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Quantity"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/quantity_dropdown"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/beginDate_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Begin Date"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/beginDate_dropdown"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:backgroundTint="@color/white"
-                android:text="25-08-2020"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/returnDate_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Return Date"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/returnDate_dropdown"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:backgroundTint="@color/white"
-                android:text="25-08-2020"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/description_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Description"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/description_input"
-                android:layout_width="355dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
-                    android:hint="Put your description here.." />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                android:id="@+id/reserve_btn"
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:backgroundTint="@color/blue"
-                android:text="RESERVE"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
     <RelativeLayout
-        android:layout_weight="0"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_below="@id/layoutButton2"
+        android:layout_weight="0"
         android:orientation="horizontal">
 
         <ImageView
@@ -257,7 +74,7 @@
             android:layout_marginEnd="341dp"
             android:layout_marginBottom="12dp"
             android:text="Home"
-            android:textColor="@color/blue"
+            android:textColor="#000050"
             android:textSize="15sp" />
 
         <ImageView
@@ -282,7 +99,7 @@
             android:layout_marginEnd="220dp"
             android:layout_marginBottom="12dp"
             android:text="Reservation"
-            android:textColor="@color/blue"
+            android:textColor="#000050"
             android:textSize="15sp" />
 
         <ImageView
@@ -307,7 +124,7 @@
             android:layout_marginEnd="131dp"
             android:layout_marginBottom="12dp"
             android:text="Asset"
-            android:textColor="@color/blue"
+            android:textColor="#000050"
             android:textSize="15sp" />
 
         <ImageView
@@ -332,7 +149,8 @@
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="12dp"
             android:text="Profile"
-            android:textColor="@color/blue"
+            android:textColor="#000050"
             android:textSize="15sp" />
     </RelativeLayout>
+
 </LinearLayout>
