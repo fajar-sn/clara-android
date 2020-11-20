@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">clara-android</string>
+    <string name="home">Home</string>
+    <string name="reservation">Reservation</string>
+    <string name="asset">Asset</string>
+    <string name="profile">Profile</string>
 </resources>
