@@ -1,4 +1,4 @@
-package com.pens.it.d4b2018.clara_android.base;
+package com.pens.it.d4b2018.clara_android.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import com.pens.it.d4b2018.clara_android.R;
+import com.pens.it.d4b2018.clara_android.presenter.BasePresenter;
 
 public abstract class BaseFragment<T extends FragmentActivity, U extends BasePresenter> extends Fragment {
 
@@ -18,12 +19,12 @@ public abstract class BaseFragment<T extends FragmentActivity, U extends BasePre
     protected U mPresenter;
     protected FragmentListener fragmentListener;
 
-    protected void setTitle(String title){
+    public void setTitle(String title){
         this.title = title;
         fragmentListener.setTitle(title);
     }
 
-    protected String getTitle() {
+    public String getTitle() {
         return title;
     }
 

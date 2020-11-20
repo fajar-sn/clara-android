@@ -7,8 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.pens.it.d4b2018.clara_android.R;
-import com.pens.it.d4b2018.clara_android.base.BaseFragment;
-import com.pens.it.d4b2018.clara_android.base.FragmentListener;
+import com.pens.it.d4b2018.clara_android.fragment.BaseFragment;
+import com.pens.it.d4b2018.clara_android.fragment.FragmentListener;
 
 public abstract class BaseActivity extends FragmentActivity implements FragmentListener {
 
