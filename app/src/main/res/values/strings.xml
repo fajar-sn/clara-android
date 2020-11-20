@@ -4,4 +4,11 @@
     <string name="reservation">Reservation</string>
     <string name="asset">Asset</string>
     <string name="profile">Profile</string>
+    <string name="let_s_make_a_reservation">Lets make a reservation.</string>
+    <string name="summary">Summary</string>
+    <string name="waiting_for_approval">Waiting for Approval</string>
+    <string name="on_reservation">On Reservation</string>
+    <string name="returned">Returned</string>
+    <string name="rejected">Rejected</string>
+    <string name="active_reservation">Active Reservation</string>
 </resources>
