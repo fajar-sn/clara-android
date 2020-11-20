@@ -11,24 +11,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.main_layout);
-        setContentView(R.layout.profile_layout);
-
+        setContentView(R.layout.dashboard_layout);
+//        setContentView(R.layout.profile_layout);
+//
 //        setHeaderTitle("Asset");
-
+//
 //        setCurrentFragment(new TestFragment());
     }
 
-    private void setCurrentFragment(Fragment fragment) {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.main_frame_container, fragment)
-                .commit();
-    }
-
-    private void setHeaderTitle(String title) {
-        TextView mainTitleTV = findViewById(R.id.profile_title_textview);
-        mainTitleTV.setText(title);
-    }
+//    private void setCurrentFragment(Fragment fragment) {
+//        getSupportFragmentManager()
+//                .beginTransaction()
+//                .add(R.id.main_frame_container, fragment)
+//                .commit();
+//    }
+//
+//    private void setHeaderTitle(String title) {
+//        TextView mainTitleTV = findViewById(R.id.profile_title_textview);
+//        mainTitleTV.setText(title);
+//    }
 
 }

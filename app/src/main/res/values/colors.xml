@@ -8,7 +8,10 @@
 
     <!--Clara-->
     <color name="blue">#000050</color>
-    <color name="gray">#707070</color>
+    <color name="gray">#757575</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#D50000</color>
+    <color name="yellow">#FFD600</color>
+    <color name="green">#00C853</color>
 </resources>
