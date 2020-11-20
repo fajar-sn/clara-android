@@ -5,276 +5,114 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/layoutButton1"
-    android:background="@drawable/bg">
-    
-    <RelativeLayout
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/layoutButton2"
-        android:layout_below="@id/layoutButton1">
+    android:background="@drawable/blue_rectangle">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="right">
 
         <TextView
-            android:id="@+id/profile_tv"
-            android:layout_width="match_parent"
+            android:id="@+id/profile_title_textview"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_alignParentTop="true"
+
             android:text="Profile"
-            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="32sp"
-            android:textAlignment="center" />
+            android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/logout_btn"
+            android:id="@+id/profile_logout_button"
+            android:layout_marginLeft="84dp"
+            android:layout_marginRight="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="21dp"
             android:backgroundTint="@color/blue"
             android:src="@drawable/logout1" />
+    </LinearLayout>
 
-        <ImageView
-            android:id="@+id/profile1_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="108dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="142dp"
-            android:layout_marginBottom="470dp"
-            android:src="@drawable/profile_white" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_user_image"
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hamabae"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
-            android:id="@+id/name_tv"
+            android:id="@+id/profile_user_name_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="113dp"
-            android:layout_marginBottom="412dp"
-            android:text="Ilyas Yudhistira"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Minami Hamabe"
             android:textColor="@color/white"
-            android:textSize="26dp"
-            android:textStyle="bold" />
+            android:textSize="24dp" />
 
         <TextView
-            android:id="@+id/nrp_tv"
+            android:id="@+id/profile_user_class_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="166dp"
-            android:layout_marginBottom="347dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/open_sans"
             android:text="3 D4 IT B"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/class_tv"
+            android:id="@+id/profile_user_nrp_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="160dp"
-            android:layout_marginBottom="379dp"
-            android:text="12345678"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/open_sans"
+            android:text="2110181043"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/white_rounded_box">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="250dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
             android:text="Reservation History"
             android:textColor="@color/blue"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="24dp"/>
 
-        <ImageView
-            android:id="@+id/lapmer1_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="108dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="300dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="140dp"
-            android:src="@drawable/lapmer" />
-
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profile_reservation_history_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="202dp"
-            android:text="Lapangan Merah"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:layout_margin="16dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="150dp"
-            android:text="October 21, 2020"
-            android:textAlignment="textEnd"
-            android:textColor="@color/gray"
-            android:textSize="12sp"
-            android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/lapmer2_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="108dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="300dp"
-            android:layout_marginBottom="30dp"
-            android:src="@drawable/lapmer" />
+    </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="93dp"
-            android:text="Lapangan Merah"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="40dp"
-            android:text="October 21, 2020"
-            android:textAlignment="textEnd"
-            android:textColor="@color/gray"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_weight="0"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_below="@id/layoutButton2"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/home_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="340dp"
-            android:layout_marginBottom="33dp"
-            android:src="@drawable/home" />
-
-        <TextView
-            android:id="@+id/home_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="341dp"
-            android:layout_marginBottom="12dp"
-            android:text="Home"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
-
-        <ImageView
-            android:id="@+id/reservation_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="239dp"
-            android:layout_marginBottom="33dp"
-            android:src="@drawable/reservation" />
-
-        <TextView
-            android:id="@+id/reservation_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="220dp"
-            android:layout_marginBottom="12dp"
-            android:text="Reservation"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
-
-        <ImageView
-            android:id="@+id/asset_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="128dp"
-            android:layout_marginBottom="33dp"
-            android:src="@drawable/asset" />
-
-        <TextView
-            android:id="@+id/asset_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="195dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="131dp"
-            android:layout_marginBottom="12dp"
-            android:text="Asset"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
-
-        <ImageView
-            android:id="@+id/profile2_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="38dp"
-            android:layout_marginBottom="34dp"
-            android:src="@drawable/profile" />
-
-        <TextView
-            android:id="@+id/profile_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="12dp"
-            android:text="Profile"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
-    </RelativeLayout>
 </LinearLayout>
