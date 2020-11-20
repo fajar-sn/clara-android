@@ -1,4 +1,4 @@
-package com.pens.it.d4b2018.clara_android.base;
+package com.pens.it.d4b2018.clara_android.activity;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.pens.it.d4b2018.clara_android.R;
+import com.pens.it.d4b2018.clara_android.base.BaseFragment;
+import com.pens.it.d4b2018.clara_android.base.FragmentListener;
 
 public abstract class BaseActivity extends FragmentActivity implements FragmentListener {
 
@@ -31,7 +33,7 @@ public abstract class BaseActivity extends FragmentActivity implements FragmentL
             fragmentTransaction.addToBackStack(currentFragment.getTitle());
         }
 
-        fragmentTransaction.replace(R.id.flFragmentContainer, fragment, fragment.getTitle());
+        fragmentTransaction.replace(R.id.fragment_container_frame_layout, fragment, fragment.getTitle());
         fragmentTransaction.commit();
 
         this.currentFragment = fragment;
