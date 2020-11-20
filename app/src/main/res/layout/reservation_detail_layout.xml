@@ -8,7 +8,7 @@
     android:background="@drawable/bg2">
 
     <TextView
-        android:id="@+id/profile_tv"
+        android:id="@+id/profile_title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -225,16 +225,16 @@
             android:layout_marginEnd="10dp"
             >
             <TableRow>
-                <ImageView
-                    android:id="@+id/rejected_iv"
-                    android:layout_width="40dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginStart="10dp"
-                    android:orientation="horizontal"
-                    android:src="@drawable/grey_circle" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/rejected_iv"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_marginTop="12dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:src="@drawable/grey_circle" />-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

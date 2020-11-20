@@ -8,7 +8,5 @@
     <corners
         android:topLeftRadius="30dp"
         android:topRightRadius="30dp"/>
-    <padding
-        android:left="20dp"/>
 
 </shape>
