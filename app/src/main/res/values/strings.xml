@@ -11,4 +11,8 @@
     <string name="returned">Returned</string>
     <string name="rejected">Rejected</string>
     <string name="active_reservation">Active Reservation</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_into_your_account">Sign in into your account!</string>
+    <string name="password">Password</string>
 </resources>
