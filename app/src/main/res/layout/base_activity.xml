@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rlActivityFragmentHolder"
-    android:background="@color/blue"
+    android:id="@+id/base_activity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title_text_view"
+    <RelativeLayout
+        android:id="@+id/content_relative_layout"
+        android:background="@color/blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
-        tools:text="Title"
-        android:textColor="@color/white"
-        android:layout_margin="30dp"
-        android:textStyle="bold"
-        android:textAlignment="center" />
+        android:layout_above="@id/bottom_navigation_bar" >
 
-    <FrameLayout
-        android:id="@+id/fragment_container_frame_layout"
-        android:background="@drawable/white_rounded_box"
-        android:layout_below="@id/title_text_view"
-        android:layout_above="@id/dashboard_bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            tools:text="Title"
+            android:textColor="@color/white"
+            android:layout_margin="30dp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container_frame_layout"
+            android:background="@drawable/white_rounded_box"
+            android:layout_below="@id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/dashboard_bottom_navigation"
+        android:id="@+id/bottom_navigation_bar"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
