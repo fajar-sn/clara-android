@@ -17,4 +17,9 @@
         <!-- Icon Color -->
         <item name="android:tint">@color/gray</item>
     </style>
+
+    <style name="ReverseClaraTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryLight">@color/white</item>
+    </style>
 </resources>

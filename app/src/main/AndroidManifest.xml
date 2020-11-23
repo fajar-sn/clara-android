@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/ClaraTheme">
-        <activity android:name=".activity.SignInActivity" />
-        <activity android:name=".activity.SplashScreenActivity">
+        <activity android:name=".activities.SignInActivity" />
+        <activity android:name=".activities.DashboardActivity" />
+        <activity android:name=".activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
