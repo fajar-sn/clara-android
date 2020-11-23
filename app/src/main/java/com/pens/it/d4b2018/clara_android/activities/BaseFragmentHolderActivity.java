@@ -1,4 +1,4 @@
-package com.pens.it.d4b2018.clara_android.activity;
+package com.pens.it.d4b2018.clara_android.activities;
 
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;

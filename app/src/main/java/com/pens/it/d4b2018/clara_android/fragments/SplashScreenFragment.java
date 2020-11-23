@@ -1,4 +1,4 @@
-package com.pens.it.d4b2018.clara_android.fragment;
+package com.pens.it.d4b2018.clara_android.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 
 import com.pens.it.d4b2018.clara_android.R;
-import com.pens.it.d4b2018.clara_android.activity.DashboardActivity;
-import com.pens.it.d4b2018.clara_android.activity.SignInActivity;
-import com.pens.it.d4b2018.clara_android.activity.SplashScreenActivity;
-import com.pens.it.d4b2018.clara_android.contract.SplashScreenContract;
-import com.pens.it.d4b2018.clara_android.presenter.BasePresenter;
-import com.pens.it.d4b2018.clara_android.presenter.SplashScreenPresenter;
+import com.pens.it.d4b2018.clara_android.activities.DashboardActivity;
+import com.pens.it.d4b2018.clara_android.activities.SignInActivity;
+import com.pens.it.d4b2018.clara_android.activities.SplashScreenActivity;
+import com.pens.it.d4b2018.clara_android.contracts.SplashScreenContract;
+import com.pens.it.d4b2018.clara_android.presenters.BasePresenter;
+import com.pens.it.d4b2018.clara_android.presenters.SplashScreenPresenter;
 
 public class SplashScreenFragment extends BaseFragment <SplashScreenActivity, BasePresenter> implements SplashScreenContract.View {
 
@@ -30,13 +30,6 @@ public class SplashScreenFragment extends BaseFragment <SplashScreenActivity, Ba
         mPresenter = new SplashScreenPresenter(this);
         mPresenter.start();
         return fragmentView;
-    }
-
-    @Override
-    public void redirectToDashboard() {
-        Intent intent = new Intent(activity, DashboardActivity.class);
-        startActivity(intent);
-        activity.finish();
     }
 
     @Override

@@ -1,9 +1,9 @@
-package com.pens.it.d4b2018.clara_android.activity;
+package com.pens.it.d4b2018.clara_android.activities;
 
 import android.view.View;
 
 import com.pens.it.d4b2018.clara_android.R;
-import com.pens.it.d4b2018.clara_android.fragment.SplashScreenFragment;
+import com.pens.it.d4b2018.clara_android.fragments.SplashScreenFragment;
 
 public class SplashScreenActivity extends BaseFragmentHolderActivity {
 

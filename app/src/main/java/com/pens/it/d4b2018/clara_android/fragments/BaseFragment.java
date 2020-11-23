@@ -1,4 +1,4 @@
-package com.pens.it.d4b2018.clara_android.fragment;
+package com.pens.it.d4b2018.clara_android.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import com.pens.it.d4b2018.clara_android.R;
-import com.pens.it.d4b2018.clara_android.presenter.BasePresenter;
+import com.pens.it.d4b2018.clara_android.presenters.BasePresenter;
 
 public abstract class BaseFragment<T extends FragmentActivity, U extends BasePresenter> extends Fragment {
 

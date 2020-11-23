@@ -1,6 +1,6 @@
-package com.pens.it.d4b2018.clara_android.presenter;
+package com.pens.it.d4b2018.clara_android.presenters;
 
-import com.pens.it.d4b2018.clara_android.contract.SplashScreenContract;
+import com.pens.it.d4b2018.clara_android.contracts.SplashScreenContract;
 
 import android.os.Handler;
 
@@ -14,12 +14,8 @@ public class SplashScreenPresenter implements BasePresenter {
 
     @Override
     public void start() {
+        int delay = 750; //in millis
         final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                VIEW.redirectToSignIn();
-            }
-        }, 750);
+        handler.postDelayed(VIEW::redirectToSignIn, delay);
     }
 }
