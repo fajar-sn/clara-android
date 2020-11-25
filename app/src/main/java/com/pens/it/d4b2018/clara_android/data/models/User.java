@@ -39,6 +39,7 @@ public class User extends BaseModel {
     @Expose
     private String id;
 
+    @SerializedName("password")
     private String password;
 
     public User(String fullName,
@@ -56,11 +57,6 @@ public class User extends BaseModel {
         this.role = role;
         this.updatedAt = updatedAt;
         this.createdAt = createdAt;
-        this.password = password;
-    }
-
-    public User(String email, String password) {
-        this.email = email;
         this.password = password;
     }
 

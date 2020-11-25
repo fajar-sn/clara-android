@@ -1,9 +1,13 @@
 package com.pens.it.d4b2018.clara_android.data.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class BaseModel {
 
+    @SerializedName("message")
     private String statusMsg;
 
+    @SerializedName("code")
     private String statusCode;
 
     public String getStatusMsg() {
