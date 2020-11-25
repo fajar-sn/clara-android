@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
-import com.pens.it.d4b2018.clara_android.data.models.User;
+import com.pens.it.d4b2018.clara_android.data.models.LoginResponse;
 
-public class UserSessionRepository implements SessionRepository<User> {
+public class UserSessionRepository implements SessionRepository<LoginResponse> {
 
-    private static final String SESSION_USER = "SessionUser";
+    private static final String USER_TOKEN = "user_token";
     private final SharedPreferences SHARED_PREFERENCES;
 
     public UserSessionRepository(Context context) {
@@ -16,23 +16,23 @@ public class UserSessionRepository implements SessionRepository<User> {
     }
 
     @Override
-    public User initialize(User sessionData) {
+    public LoginResponse initialize(LoginResponse sessionData) {
         setSessionData(sessionData);
         return getSessionData();
     }
 
     @Override
-    public User getSessionData() {
-        String sessionDataJson = SHARED_PREFERENCES.getString(SESSION_USER, null);
+    public LoginResponse getSessionData() {
+        String sessionDataJson = SHARED_PREFERENCES.getString(USER_TOKEN, null);
         if (sessionDataJson != null)
-            return new Gson().fromJson(sessionDataJson, User.class);
+            return new Gson().fromJson(sessionDataJson, LoginResponse.class);
         return null;
     }
 
     @Override
-    public void setSessionData(User sessionData) {
+    public void setSessionData(LoginResponse sessionData) {
         SharedPreferences.Editor editor = SHARED_PREFERENCES.edit();
-        editor.putString(SESSION_USER, new Gson().toJson(sessionData));
+        editor.putString(USER_TOKEN, new Gson().toJson(sessionData));
         editor.apply();
     }
 
@@ -42,7 +42,7 @@ public class UserSessionRepository implements SessionRepository<User> {
     }
 
     @Override
-    public void update(User sessionData) {
+    public void update(LoginResponse sessionData) {
         destroy();
         setSessionData(sessionData);
     }

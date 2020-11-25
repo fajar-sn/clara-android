@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class UserResponse extends User {
+public class LoginResponse extends BaseModel {
 
     @SerializedName("token")
     @Expose
@@ -15,21 +15,9 @@ public class UserResponse extends User {
     @Expose
     private String tokenType;
 
-    @SerializedName("expires_in")
-    @Expose
-    private Integer expiresIn;
-
     @SerializedName("role")
     @Expose
     private String role;
-
-    public UserResponse(String fullName, String email, String nrp, String _class, String role, String updatedAt, String createdAt, String password) {
-        super(fullName, email, nrp, _class, role, updatedAt, createdAt, password);
-    }
-
-    public UserResponse(String email, String password) {
-        super(email, password);
-    }
 
     public String getToken() {
         return token;
@@ -47,14 +35,6 @@ public class UserResponse extends User {
         this.tokenType = tokenType;
     }
 
-    public Integer getExpiresIn() {
-        return expiresIn;
-    }
-
-    public void setExpiresIn(Integer expiresIn) {
-        this.expiresIn = expiresIn;
-    }
-
     public String getRole() {
         return role;
     }
@@ -69,8 +49,13 @@ public class UserResponse extends User {
         return "User Response {" +
                 "token='" + token + '\'' +
                 ", tokenType='" + tokenType + '\'' +
-                ", expiresIn='" + expiresIn + '\'' +
                 ", role='" + role + '\'' +
                 '}';
+    }
+
+    public LoginResponse(String token, String tokenType, String role) {
+        this.token = token;
+        this.tokenType = tokenType;
+        this.role = role;
     }
 }
