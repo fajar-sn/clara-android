@@ -16,4 +16,6 @@
     <string name="sign_in_into_your_account">Sign in into your account!</string>
     <string name="password">Password</string>
     <string name="clara_logo">Clara logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_auth"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.pens.it.d4b2018.clara_android.mvvm.view.authentication.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.pens.it.d4b2018.clara_android.mvvm.view.authentication.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.pens.it.d4b2018.clara_android.mvvm.view.authentication.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register" />
+
+</navigation>
