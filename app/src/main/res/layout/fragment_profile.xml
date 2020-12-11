@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:id="@+id/profile_layout"
-    android:background="@drawable/blue_rectangle">
+    android:id="@+id/fragment_profile"
+    android:background="?attr/colorPrimaryDark">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        android:layout_gravity="right">
+        android:layout_gravity="end">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/profile_title_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-
-            android:text="Profile"
-            android:textColor="@color/white"
+            android:text="@string/profile"
+            android:textColor="?attr/colorPrimary"
             android:textSize="32sp"
             android:textStyle="bold" />
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/profile_logout_button"
-            android:layout_marginLeft="84dp"
-            android:layout_marginRight="24dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginEnd="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="?attr/colorPrimaryDark"
             android:src="@drawable/logout1" />
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:layout_marginBottom="24dp"
@@ -53,7 +52,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/profile_user_name_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,10 +60,10 @@
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/open_sans_bold"
             android:text="Minami Hamabe"
-            android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textColor="?attr/colorPrimary"
+            android:textSize="24sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/profile_user_class_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,47 +71,48 @@
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/open_sans"
             android:text="3 D4 IT B"
-            android:textColor="@color/white"
-            android:textSize="18dp" />
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/profile_user_nrp_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/open_sans"
             android:text="2110181043"
-            android:textColor="@color/white"
-            android:textSize="18dp" />
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/profile_frame_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/white_rounded_box">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:text="Reservation History"
-            android:textColor="@color/blue"
+            android:text="@string/reservation_history"
+            android:textColor="?attr/colorPrimaryDark"
             android:fontFamily="@font/open_sans_bold"
-            android:textSize="24dp"/>
+            android:textSize="24sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/profile_reservation_history_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp"
+            tools:listitem="@layout/reservation_card"/>
 
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
