@@ -15,7 +15,7 @@ public class DashboardFragment extends BaseFragment<DashboardActivity, Dashboard
     @Override
     public android.view.View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        fragmentView = inflater.inflate(R.layout.dashboard_layout, container, false);
+        fragmentView = inflater.inflate(R.layout.fragment_dashboard, container, false);
 //        mPresenter = new DashboardPresenter(this);
 //        mPresenter.start();
 

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvvm.view.main.MainActivity">
 
     <SearchView
         android:id="@+id/list_searchview"
@@ -10,12 +14,13 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="16dp"
         android:iconifiedByDefault="false"
-        android:theme="@style/AppSearchView"
+        android:layoutDirection="rtl"
         android:queryHint="Search"
-        android:layoutDirection="rtl" />
+        android:theme="@style/AppSearchView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_recyclerview"
+        tools:listitem="@layout/reservation_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp" />

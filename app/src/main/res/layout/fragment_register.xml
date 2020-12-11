@@ -10,7 +10,7 @@
     tools:context=".mvvm.view.authentication.AuthActivity">
 
     <ImageView
-        android:id="@+id/clara_iv"
+        android:id="@+id/image_view_clara"
         android:layout_width="256dp"
         android:layout_height="90dp"
         android:layout_gravity="center"

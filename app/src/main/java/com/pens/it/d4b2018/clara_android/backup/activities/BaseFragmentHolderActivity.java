@@ -16,7 +16,7 @@ public abstract class BaseFragmentHolderActivity extends BaseActivity {
 
     @Override
     protected void initializeView() {
-        setContentView(R.layout.base_activity);
+        setContentView(R.layout.fragment_main);
         contentRelativeLayout = findViewById(R.id.content_relative_layout);
         bottomNavigationView = findViewById(R.id.bottom_navigation_bar);
         titleTextView = findViewById(R.id.title_text_view);

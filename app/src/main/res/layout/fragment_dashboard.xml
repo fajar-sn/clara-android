@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/blue"
+    android:background="?attr/colorPrimaryDark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/dashboard_layout">
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_toStartOf="@id/dashboard_profile_image_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello, Fajar!"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
@@ -34,10 +34,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/let_s_make_a_reservation"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="14sp" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_alignParentEnd="true"
@@ -56,7 +56,7 @@
         android:background="@drawable/white_rounded_box"
         android:layout_below="@+id/dashboard_top_relative_layout" >
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/summary_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -252,13 +252,13 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/dashboard_reservation_recycler_view"-->
-<!--            android:layout_below="@id/active_reservation_text_view"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginHorizontal="30dp"-->
-<!--            android:listitem="@layout/reservation_card" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dashboard_reservation_recycler_view"
+            android:layout_below="@id/active_reservation_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="30dp"
+            tools:listitem="@layout/reservation_card" />
 
     </RelativeLayout>
 
