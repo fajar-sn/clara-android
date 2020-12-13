@@ -8,11 +8,12 @@ import com.pens.it.d4b2018.clara_android.mvvm.data.models.LoginRequest
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.LoginResponse
 import com.pens.it.d4b2018.clara_android.mvvm.data.remote.Resource
 import com.pens.it.d4b2018.clara_android.mvvm.data.repositories.AuthRepository
+import com.pens.it.d4b2018.clara_android.mvvm.view.base.BaseViewModel
 import kotlinx.coroutines.launch
 
 class AuthViewModel(
         private val repository: AuthRepository
-) : ViewModel() {
+) : BaseViewModel(repository) {
 
     private val _loginResponse : MutableLiveData<Resource<LoginResponse>> = MutableLiveData()
     val loginResponse: LiveData<Resource<LoginResponse>>

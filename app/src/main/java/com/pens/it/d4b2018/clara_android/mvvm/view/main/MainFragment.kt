@@ -40,6 +40,10 @@ class MainFragment: BaseFragment<MainViewModel, FragmentProfileBinding, UserRepo
                 }
             }
         })
+
+        binding.profileLogoutButton.setOnClickListener {
+            logout()
+        }
     }
 
     private fun updateUI(userResponse: UserResponse) {
