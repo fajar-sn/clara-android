@@ -9,11 +9,12 @@ import com.pens.it.d4b2018.clara_android.mvvm.data.models.User
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.UserResponse
 import com.pens.it.d4b2018.clara_android.mvvm.data.remote.Resource
 import com.pens.it.d4b2018.clara_android.mvvm.data.repositories.UserRepository
+import com.pens.it.d4b2018.clara_android.mvvm.view.base.BaseViewModel
 import kotlinx.coroutines.launch
 
 class MainViewModel(
         private val repository: UserRepository
-) : ViewModel() {
+) : BaseViewModel(repository) {
 
     private val _user: MutableLiveData<Resource<UserResponse>> = MutableLiveData()
     val user: LiveData<Resource<UserResponse>>

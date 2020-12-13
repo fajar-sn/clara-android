@@ -3,6 +3,7 @@ package com.pens.it.d4b2018.clara_android.mvvm.data.local
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.clear
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.preferencesKey
 import androidx.datastore.preferences.createDataStore
@@ -30,6 +31,12 @@ class UserPreferences(
     suspend fun saveAuthToken(authToken: String) {
         dataStore.edit { preferences ->
             preferences[KEY_AUTH] = authToken
+        }
+    }
+
+    suspend fun clear() {
+        dataStore.edit { preferences ->
+            preferences.clear()
         }
     }
 

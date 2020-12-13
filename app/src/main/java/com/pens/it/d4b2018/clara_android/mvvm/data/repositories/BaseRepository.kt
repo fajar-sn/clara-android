@@ -28,4 +28,8 @@ abstract class BaseRepository(
         }
     }
 
+    suspend fun logout(api: APIService) = safeApiCall {
+        api.logout()
+    }
+
 }

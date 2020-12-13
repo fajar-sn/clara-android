@@ -40,7 +40,7 @@ class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepo
                         requireActivity().startNewActivity(MainActivity::class.java)
                     }
                 }
-                is Resource.Failure -> handleApiError(it)
+                is Resource.Failure -> handleApiError(it) { login() }
             }
         })
 
@@ -60,6 +60,13 @@ class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepo
 
     }
 
+    private fun login() {
+        val email = binding.emailInput.text.toString().trim()
+        val password = binding.passwordInput.text.toString().trim()
+        val request = LoginRequest(email, password)
+        viewModel.login(request)
+    }
+
     override fun getViewModel() = AuthViewModel::class.java
 
     override fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?) = FragmentLoginBinding.inflate(inflater, container, false)
@@ -70,11 +77,7 @@ class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepo
         val thisFragment = this
 
         binding.signinBtn.setOnClickListener {
-            val email = binding.emailInput.text.toString().trim()
-            val password = binding.passwordInput.text.toString().trim()
-            val request = LoginRequest(email, password)
-            // @todo add input validations
-            viewModel.login(request)
+            login()
         }
 
         binding.buttonSignupPage.setOnClickListener {
