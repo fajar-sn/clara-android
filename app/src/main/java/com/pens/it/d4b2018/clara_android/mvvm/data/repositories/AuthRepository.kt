@@ -5,9 +5,9 @@ import com.pens.it.d4b2018.clara_android.mvvm.data.models.LoginRequest
 import com.pens.it.d4b2018.clara_android.mvvm.data.remote.APIService
 
 class AuthRepository(
-        private val api : APIService,
+        override val api : APIService,
         private val preferences: UserPreferences
-) : BaseRepository() {
+) : BaseRepository(api) {
 
     suspend fun login(loginRequest: LoginRequest) = safeApiCall {
         api.performLogin(loginRequest)

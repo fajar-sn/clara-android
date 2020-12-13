@@ -1,6 +1,7 @@
 package com.pens.it.d4b2018.clara_android.mvvm.view.authentication
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -17,6 +18,7 @@ import com.pens.it.d4b2018.clara_android.mvvm.data.repositories.AuthRepository
 import com.pens.it.d4b2018.clara_android.mvvm.view.base.BaseFragment
 import com.pens.it.d4b2018.clara_android.mvvm.view.main.MainActivity
 import com.pens.it.d4b2018.clara_android.mvvm.view.utils.enable
+import com.pens.it.d4b2018.clara_android.mvvm.view.utils.handleApiError
 import com.pens.it.d4b2018.clara_android.mvvm.view.utils.startNewActivity
 import com.pens.it.d4b2018.clara_android.mvvm.view.utils.visible
 import kotlinx.coroutines.launch
@@ -30,16 +32,15 @@ class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepo
         binding.signinBtn.enable(false)
 
         viewModel.loginResponse.observe(viewLifecycleOwner, Observer {
-            binding.progressBar.visible(false)
+            binding.progressBar.visible(it is Resource.Loading)
             when (it) {
                 is Resource.Success -> {
-                    viewModel.saveAuthToken(it.value.token)
-                    requireActivity().startNewActivity(MainActivity::class.java)
-
+                    lifecycleScope.launch {
+                        viewModel.saveAuthToken(it.value.token)
+                        requireActivity().startNewActivity(MainActivity::class.java)
+                    }
                 }
-                is Resource.Failure -> {
-                    Toast.makeText(requireContext(), "Login Failure", Toast.LENGTH_LONG).show()
-                }
+                is Resource.Failure -> handleApiError(it)
             }
         })
 
@@ -73,7 +74,6 @@ class LoginFragment : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepo
             val password = binding.passwordInput.text.toString().trim()
             val request = LoginRequest(email, password)
             // @todo add input validations
-            binding.progressBar.visible(true)
             viewModel.login(request)
         }
 
