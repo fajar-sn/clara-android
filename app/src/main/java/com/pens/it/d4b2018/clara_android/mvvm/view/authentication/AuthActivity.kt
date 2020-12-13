@@ -3,6 +3,7 @@ package com.pens.it.d4b2018.clara_android.mvvm.view.authentication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
@@ -16,7 +17,7 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val userPreferences = UserPreferences(this)
         userPreferences.authToken.asLiveData().observe(this, Observer {
-            if (it == null) {
+            if (it != null) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 this.finish()

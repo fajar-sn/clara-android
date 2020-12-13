@@ -3,8 +3,10 @@ package com.pens.it.d4b2018.clara_android.mvvm.data.remote
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.LoginRequest
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.LoginResponse
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.User
+import com.pens.it.d4b2018.clara_android.mvvm.data.models.UserResponse
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface APIService {
@@ -13,4 +15,7 @@ interface APIService {
 
     @POST(APIUtils.REGISTER_URL)
     fun performRegister(@Body user: User?): Call<User?>?
+
+    @GET(APIUtils.PROFILE_URL)
+    suspend fun getUser(): UserResponse
 }
