@@ -15,7 +15,7 @@ interface APIService {
     suspend fun performLogin(@Body loginRequest: LoginRequest): LoginResponse
 
     @POST(APIUtils.REGISTER_URL)
-    fun performRegister(@Body user: User?): Call<User?>?
+    suspend fun performRegister(@Body user: User): ResponseBody
 
     @GET(APIUtils.PROFILE_URL)
     suspend fun getUser(): UserResponse

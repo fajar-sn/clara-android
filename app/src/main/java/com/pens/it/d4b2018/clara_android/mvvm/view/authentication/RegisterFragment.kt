@@ -6,20 +6,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pens.it.d4b2018.clara_android.R
+import com.pens.it.d4b2018.clara_android.databinding.FragmentRegisterBinding
+import com.pens.it.d4b2018.clara_android.mvvm.data.remote.APIService
+import com.pens.it.d4b2018.clara_android.mvvm.data.repositories.AuthRepository
+import com.pens.it.d4b2018.clara_android.mvvm.view.base.BaseFragment
 
-class RegisterFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class RegisterFragment : BaseFragment<AuthViewModel, FragmentRegisterBinding, AuthRepository>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false)
-    }
+    override fun getViewModel(): Class<AuthViewModel> = AuthViewModel::class.java
+
+    override fun getFragmentBinding(
+            inflater: LayoutInflater,
+            container: ViewGroup?
+    ): FragmentRegisterBinding = FragmentRegisterBinding.inflate(inflater, container, false)
+
+    override fun getFragmentRepository() = AuthRepository(retrofitClient.buildApi(APIService::class.java), userPreferences)
 
 }
