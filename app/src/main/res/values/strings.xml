@@ -23,4 +23,8 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="sign_in_uppercase">SIGN IN</string>
     <string name="reservation_history">Reservation History</string>
+    <string name="full_name">Full Name</string>
+    <string name="nrp">NRP</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>

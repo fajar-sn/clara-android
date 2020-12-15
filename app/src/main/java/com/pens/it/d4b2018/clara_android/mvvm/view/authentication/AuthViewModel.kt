@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.LoginRequest
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.LoginResponse
+import com.pens.it.d4b2018.clara_android.mvvm.data.models.User
 import com.pens.it.d4b2018.clara_android.mvvm.data.remote.Resource
 import com.pens.it.d4b2018.clara_android.mvvm.data.repositories.AuthRepository
 import com.pens.it.d4b2018.clara_android.mvvm.view.base.BaseViewModel
@@ -26,6 +27,10 @@ class AuthViewModel(
 
     suspend fun saveAuthToken(token: String) {
         repository.saveAuthToken(token)
+    }
+
+    fun register(user: User) = viewModelScope.launch {
+
     }
 
 }
