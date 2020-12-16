@@ -1,11 +1,8 @@
 package com.pens.it.d4b2018.clara_android.mvvm.view.main
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pens.it.d4b2018.clara_android.mvvm.data.models.User
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.UserResponse
 import com.pens.it.d4b2018.clara_android.mvvm.data.remote.Resource
 import com.pens.it.d4b2018.clara_android.mvvm.data.repositories.UserRepository

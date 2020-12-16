@@ -5,10 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
-import com.pens.it.d4b2018.clara_android.databinding.FragmentMainBinding
 import com.pens.it.d4b2018.clara_android.databinding.FragmentProfileBinding
-import com.pens.it.d4b2018.clara_android.mvvm.data.models.User
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.UserResponse
 import com.pens.it.d4b2018.clara_android.mvvm.data.remote.APIService
 import com.pens.it.d4b2018.clara_android.mvvm.data.remote.Resource
@@ -27,7 +24,7 @@ class MainFragment: BaseFragment<MainViewModel, FragmentProfileBinding, UserRepo
 
         viewModel.getUser()
 
-        viewModel.user.observe(viewLifecycleOwner, Observer {
+        viewModel.user.observe(viewLifecycleOwner, {
             when (it) {
                 is Resource.Success -> {
                     binding.progressBar.visible(false)
@@ -47,11 +44,10 @@ class MainFragment: BaseFragment<MainViewModel, FragmentProfileBinding, UserRepo
     }
 
     private fun updateUI(userResponse: UserResponse) {
-        val user = userResponse.user
-        Log.e("clara", user.toString())
+        val user = userResponse.userrr
         with(binding) {
             profileUserNameTextview.text = user.fullName
-            profileUserClassTextview.text = user.class_
+            profileUserClassTextview.text = user.grade
             profileUserNrpTextview.text = user.nrp
         }
     }

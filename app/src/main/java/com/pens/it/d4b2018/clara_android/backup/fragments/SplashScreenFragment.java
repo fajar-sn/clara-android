@@ -25,7 +25,7 @@ public class SplashScreenFragment extends BaseFragment <SplashScreenActivity, Ba
             @Nullable Bundle savedInstanceState
     ) {
         super.onCreateView(inflater, container, savedInstanceState);
-        fragmentView = inflater.inflate(R.layout.fragment_splash_screen, container, false);
+        fragmentView = inflater.inflate(R.layout.activity_splash_screen, container, false);
         mPresenter = new SplashScreenPresenter(this);
         mPresenter.start();
         return fragmentView;
