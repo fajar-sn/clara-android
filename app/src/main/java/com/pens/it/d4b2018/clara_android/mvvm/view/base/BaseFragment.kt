@@ -1,6 +1,7 @@
 package com.pens.it.d4b2018.clara_android.mvvm.view.base
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,9 +21,9 @@ import kotlinx.coroutines.launch
 abstract class BaseFragment<VM: BaseViewModel, B: ViewBinding, R: BaseRepository> : Fragment() {
 
     protected lateinit var userPreferences: UserPreferences
-    protected lateinit var binding: B
     protected lateinit var viewModel : VM
     protected val retrofitClient = RetrofitClient()
+    protected lateinit var binding: B
 
     override fun onCreateView(
             inflater: LayoutInflater,

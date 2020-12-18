@@ -5,23 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/colorPrimaryDark"
     tools:context=".mvvm.view.main.MainActivity">
 
-    <SearchView
-        android:id="@+id/list_searchview"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="16dp"
-        android:iconifiedByDefault="false"
-        android:layoutDirection="rtl"
-        android:queryHint="Search"
-        android:theme="@style/AppSearchView" />
+        android:layout_margin="30dp"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:text="Title" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_recyclerview"
-        tools:listitem="@layout/reservation_card"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp" />
+        android:background="@drawable/white_rounded_box">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/list_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:iconifiedByDefault="false"
+            android:layoutDirection="rtl"
+            android:queryHint="Search"
+            android:theme="@style/AppSearchView" />
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/list_recyclerview"-->
+<!--            tools:listitem="@layout/reservation_card"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="16dp" />-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 </LinearLayout>
