@@ -17,27 +17,26 @@ data class User(
         var nrp: String,
 
         @Expose
-        @SerializedName("class")
-        var class_: String,
+        @SerializedName("grade")
+        var grade: String,
 
         @Expose
         @SerializedName("role")
-        var role: String,
+        var role: String = "Student",
 
         @Expose
         @SerializedName("updated_at")
-        var updatedAt: String,
+        var updatedAt: String? = null,
 
         @Expose
         @SerializedName("created_at")
-        var createdAt: String,
+        var createdAt: String? = null,
 
         @SerializedName("_id")
         @Expose
-        var id: String,
+        var id: String? = null,
 
         @SerializedName("password")
-        var password: String?
-
+        var password: String? = null
 
 )

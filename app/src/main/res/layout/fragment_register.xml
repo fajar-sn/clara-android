@@ -93,6 +93,31 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/grade_input_layout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="@string/grade"
+            app:boxBackgroundColor="?attr/colorPrimary"
+            android:textColorHint="?attr/colorAccent"
+            app:hintTextColor="?attr/colorAccent"
+            app:boxStrokeColor="?attr/colorAccent"
+            app:startIconDrawable="@drawable/grade"
+            app:startIconTint="?attr/colorAccent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/grade_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="?attr/colorSecondary"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_input_layout"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -197,7 +222,7 @@
                 android:textColor="?attr/colorPrimaryDark" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/button_signup_page"
+                android:id="@+id/button_signin"
                 android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -211,7 +236,6 @@
                 android:focusable="true" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

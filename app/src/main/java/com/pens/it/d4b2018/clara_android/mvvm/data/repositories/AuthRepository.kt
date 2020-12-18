@@ -18,8 +18,8 @@ class AuthRepository(
         preferences.saveAuthToken(token)
     }
 
-    suspend fun performRegister(user: User) = safeApiCall {
-        api.performRegister(user)
+    suspend fun performRegister(userrr: User) = safeApiCall {
+        api.performRegister(userrr)
     }
 
 }
