@@ -1,13 +1,12 @@
 package com.pens.it.d4b2018.clara_android.mvvm.data.remote
 
+import com.pens.it.d4b2018.clara_android.mvvm.data.models.ReservationsResponse
 import com.pens.it.d4b2018.clara_android.mvvm.data.models.*
-import dagger.Component
 import okhttp3.ResponseBody
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
-import javax.inject.Singleton
 
 interface APIService {
     @POST(APIUtils.LOGIN_URL)
@@ -27,5 +26,11 @@ interface APIService {
             @Query("search") search: String?,
             @Query("page") page: Int
     ): AssetsResponse
+
+    @GET(APIUtils.RESERVATIONS_URL)
+    suspend fun getReservations(
+            @Query("search") search: String?,
+            @Query("page") page: Int
+    ): ReservationsResponse
 
 }
