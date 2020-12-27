@@ -29,6 +29,7 @@ class AssetsFragment : BaseFragment<AssetsViewModel, ListFragmentBinding, Assets
         super.onViewCreated(view, savedInstanceState)
         val title = "Assets"
         binding.titleTextView.text = title
+        binding.addFloatActionButton.visible(false)
 
         _binding = ListFragmentBinding.bind(view)
 
