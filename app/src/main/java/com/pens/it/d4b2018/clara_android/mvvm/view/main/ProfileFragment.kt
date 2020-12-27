@@ -1,7 +1,6 @@
 package com.pens.it.d4b2018.clara_android.mvvm.view.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +14,7 @@ import com.pens.it.d4b2018.clara_android.mvvm.view.utils.visible
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
-class ProfileFragment: BaseFragment<MainViewModel, FragmentProfileBinding, UserRepository>() {
+class ProfileFragment: BaseFragment<UserViewModel, FragmentProfileBinding, UserRepository>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -43,7 +42,7 @@ class ProfileFragment: BaseFragment<MainViewModel, FragmentProfileBinding, UserR
     }
 
     private fun updateUI(userResponse: UserResponse) {
-        val user = userResponse.userrr
+        val user = userResponse.user
         with(binding) {
             profileUserNameTextview.text = user.fullName
             profileUserClassTextview.text = user.grade
@@ -51,7 +50,7 @@ class ProfileFragment: BaseFragment<MainViewModel, FragmentProfileBinding, UserR
         }
     }
 
-    override fun getViewModel() = MainViewModel::class.java
+    override fun getViewModel() = UserViewModel::class.java
 
     override fun getFragmentBinding(
             inflater: LayoutInflater,
@@ -60,7 +59,7 @@ class ProfileFragment: BaseFragment<MainViewModel, FragmentProfileBinding, UserR
 
     override fun getFragmentRepository(): UserRepository {
         val token = runBlocking { userPreferences.authToken.first() }
-        val api = retrofitClient.buildApi(APIService::class.java, token)
+        val api = retrofitClient.buildApi(token)
         return UserRepository(api)
     }
 

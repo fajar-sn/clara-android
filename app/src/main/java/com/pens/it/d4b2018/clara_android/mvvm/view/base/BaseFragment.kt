@@ -22,7 +22,7 @@ abstract class BaseFragment<VM: BaseViewModel, B: ViewBinding, R: BaseRepository
 
     protected lateinit var userPreferences: UserPreferences
     protected lateinit var viewModel : VM
-    protected val retrofitClient = RetrofitClient()
+    protected val retrofitClient = RetrofitClient
     protected lateinit var binding: B
 
     override fun onCreateView(
@@ -42,7 +42,7 @@ abstract class BaseFragment<VM: BaseViewModel, B: ViewBinding, R: BaseRepository
 
     fun logout() = lifecycleScope.launch {
         val authToken = userPreferences.authToken.first()
-        val api = retrofitClient.buildApi(APIService::class.java, authToken)
+        val api = retrofitClient.buildApi(authToken)
         viewModel.logout(api)
         userPreferences.clear()
         requireActivity().startNewActivity(AuthActivity::class.java)

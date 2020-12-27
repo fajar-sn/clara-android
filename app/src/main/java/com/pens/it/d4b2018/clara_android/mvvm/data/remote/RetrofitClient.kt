@@ -6,12 +6,11 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitClient {
+object RetrofitClient {
 
-    fun <Api> buildApi(
-            api: Class<Api>,
+    fun buildApi(
             authToken: String? = null
-    ): Api {
+    ): APIService {
         return Retrofit.Builder()
                 .baseUrl(APIUtils.BASE_URL)
                 .client(
@@ -30,7 +29,7 @@ class RetrofitClient {
                 )
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-                .create(api)
+                .create(APIService::class.java)
     }
 
 }

@@ -9,7 +9,7 @@ import com.pens.it.d4b2018.clara_android.mvvm.data.repositories.UserRepository
 import com.pens.it.d4b2018.clara_android.mvvm.view.base.BaseViewModel
 import kotlinx.coroutines.launch
 
-class MainViewModel(
+class UserViewModel(
         private val repository: UserRepository
 ) : BaseViewModel(repository) {
 

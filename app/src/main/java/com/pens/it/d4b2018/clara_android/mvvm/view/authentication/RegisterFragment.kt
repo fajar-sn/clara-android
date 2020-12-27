@@ -61,10 +61,8 @@ class RegisterFragment : BaseFragment<AuthViewModel, FragmentRegisterBinding, Au
                                         false
                                 )
 
-    override fun getFragmentRepository() = AuthRepository(
-                                                    retrofitClient.buildApi(APIService::class.java),
-                                                    userPreferences
-                                            )
+    override fun getFragmentRepository() =
+            AuthRepository(retrofitClient.buildApi(), userPreferences)
 
     private fun setButtonOnClick() {
         val thisFragment = this

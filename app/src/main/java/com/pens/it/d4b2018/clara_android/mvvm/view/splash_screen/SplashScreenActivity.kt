@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.pens.it.d4b2018.clara_android.R
 import com.pens.it.d4b2018.clara_android.mvvm.view.authentication.AuthActivity
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 import kotlin.concurrent.schedule
 
