@@ -9,9 +9,9 @@ import com.pens.it.d4b2018.clara_android.mvvm.view.base.BaseFragment
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
-class DashboardFragment : BaseFragment<MainViewModel, FragmentDashboardBinding, UserRepository>() {
+class DashboardFragment : BaseFragment<UserViewModel, FragmentDashboardBinding, UserRepository>() {
 
-    override fun getViewModel() = MainViewModel::class.java
+    override fun getViewModel() = UserViewModel::class.java
 
     override fun getFragmentBinding(
             inflater: LayoutInflater,
@@ -20,7 +20,7 @@ class DashboardFragment : BaseFragment<MainViewModel, FragmentDashboardBinding, 
 
     override fun getFragmentRepository(): UserRepository {
         val token = runBlocking { userPreferences.authToken.first() }
-        val api = retrofitClient.buildApi(APIService::class.java, token)
+        val api = retrofitClient.buildApi(token)
         return UserRepository(api)
     }
 

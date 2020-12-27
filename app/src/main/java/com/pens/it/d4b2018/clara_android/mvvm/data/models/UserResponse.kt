@@ -6,5 +6,5 @@ import com.google.gson.annotations.SerializedName
 data class UserResponse(
         @Expose
         @SerializedName("user")
-        var userrr: User,
+        var user: User,
 )
