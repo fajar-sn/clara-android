@@ -7,7 +7,7 @@ data class AssetsResponse (
 
         @Expose
         @SerializedName("current_page")
-        val currentPage: Int?,
+        val currentPage: Int,
 
         @Expose
         @SerializedName("data")
@@ -15,31 +15,31 @@ data class AssetsResponse (
 
         @Expose
         @SerializedName("first_page_url")
-        val firstPageUrl: String?,
+        val firstPageUrl: String,
 
         @Expose
         @SerializedName("from")
-        val from: Int?,
+        val from: Int,
 
         @Expose
         @SerializedName("last_page")
-        val lastPage: Int?,
+        val lastPage: Int,
 
         @Expose
         @SerializedName("last_page_url")
-        val lastPageUrl: String?,
+        val lastPageUrl: String,
 
         @Expose
         @SerializedName("next_page_url")
-        val nextPageUrl: String?,
+        val nextPageUrl: String,
 
         @Expose
         @SerializedName("path")
-        val path: String?,
+        val path: String,
 
         @Expose
         @SerializedName("per_page")
-        val perPage: Int?,
+        val perPage: Int,
 
         @Expose
         @SerializedName("prev_page_url")
@@ -47,10 +47,10 @@ data class AssetsResponse (
 
         @Expose
         @SerializedName("to")
-        val to: Int?,
+        val to: Int,
 
         @Expose
         @SerializedName("total")
-        val total: Int?
+        val total: Int
 
 )
