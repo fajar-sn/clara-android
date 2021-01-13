@@ -6,7 +6,7 @@
     android:id="@+id/signin_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mvvm.view.authentication.AuthActivity">
+    tools:context=".view.authentication.AuthActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -93,24 +93,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/forgotpassword_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="55dp"
-            android:layout_gravity="end"
-            android:text="@string/forgot_password"
-            android:textSize="20sp"
-            android:textColor="?attr/colorPrimaryDark"
-            android:textStyle="bold" />
-
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/signin_btn"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:text="@string/sign_in_uppercase"
             android:textStyle="bold"
             android:textSize="18sp"
