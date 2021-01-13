@@ -52,7 +52,7 @@
                 android:layout_width="114dp"
                 android:layout_height="114dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/hamabae"
+                android:src="@drawable/profile_white"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"/>
 
@@ -63,7 +63,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/open_sans_bold"
-                android:text="Minami Hamabe"
+                android:text="User Name"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="24sp" />
 
@@ -74,7 +74,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/open_sans"
-                android:text="3 D4 IT B"
+                android:text="User class"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="18sp" />
 
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/open_sans"
-                android:text="2110181043"
+                android:text="User ID"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="18sp" />
 
