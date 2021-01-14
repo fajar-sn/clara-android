@@ -15,9 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/ClaraTheme"
         tools:targetApi="n">
+        <activity android:name=".view.new_reservation.NewReservationActivity"></activity>
         <activity android:name=".view.splash_screen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
