@@ -15,6 +15,8 @@ import tech.fulbek_dev.clara_app.view.utils.ReservationsListAdapter
 import tech.fulbek_dev.clara_app.view.utils.ReservationsLoadStateAdapter
 import tech.fulbek_dev.clara_app.view.utils.visible
 import kotlinx.coroutines.runBlocking
+import tech.fulbek_dev.clara_app.view.new_reservation.NewReservationActivity
+import tech.fulbek_dev.clara_app.view.utils.startNewActivity
 
 class ReservationsFragment : BaseFragment<ReservationsViewModel, ListFragmentBinding, ReservationsRepository>() {
 
@@ -39,7 +41,12 @@ class ReservationsFragment : BaseFragment<ReservationsViewModel, ListFragmentBin
                     header = ReservationsLoadStateAdapter { adapter.retry() },
                     footer = ReservationsLoadStateAdapter { adapter.retry() }
             )
+
             buttonRetry.setOnClickListener { adapter.retry() }
+
+            addFloatActionButton.setOnClickListener {
+                requireActivity().startNewActivity(NewReservationActivity::class.java)
+            }
         }
 
         viewModel.reservations.observe(viewLifecycleOwner) {

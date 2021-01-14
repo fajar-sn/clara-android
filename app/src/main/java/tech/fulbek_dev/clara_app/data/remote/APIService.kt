@@ -23,7 +23,8 @@ interface APIService {
     @GET(APIUtils.ASSETS_URL)
     suspend fun getAssets(
             @Query("search") search: String?,
-            @Query("page") page: Int
+            @Query("page") page: Int,
+            @Query("pagination") pagination: Boolean = true
     ): AssetsResponse
 
     @GET(APIUtils.RESERVATIONS_URL)
