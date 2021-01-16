@@ -9,5 +9,6 @@ object APIUtils {
     const val IMAGES_URL = "image/"
     const val PROFILE_URL = "profile/"
     const val LOGOUT_URL = "logout/"
-    const val RESERVATIONS_URL = "reservations/student/"
+    const val RESERVATIONS_STUDENT_URL = "reservations/student/"
+    const val RESERVATION_NEW_URL = "reservations/"
 }

@@ -27,10 +27,16 @@ interface APIService {
             @Query("pagination") pagination: Boolean = true
     ): AssetsResponse
 
-    @GET(APIUtils.RESERVATIONS_URL)
+    @GET(APIUtils.ASSETS_URL)
+    suspend fun getAssets(): List<Asset>
+
+    @GET(APIUtils.RESERVATIONS_STUDENT_URL)
     suspend fun getReservations(
             @Query("search") search: String?,
             @Query("page") page: Int
     ): ReservationsResponse
+
+    @POST(APIUtils.RESERVATION_NEW_URL)
+    suspend fun createNewReservation(@Body reservationRequest: ReservationRequest): ResponseBody
 
 }

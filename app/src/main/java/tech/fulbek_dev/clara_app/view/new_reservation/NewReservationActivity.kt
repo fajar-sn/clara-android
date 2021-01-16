@@ -1,17 +1,26 @@
 package tech.fulbek_dev.clara_app.view.new_reservation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import tech.fulbek_dev.clara_app.databinding.NewReservationLayoutBinding
+import androidx.appcompat.app.AppCompatActivity
+import tech.fulbek_dev.clara_app.R
+import tech.fulbek_dev.clara_app.databinding.ActivityMainBinding
+import tech.fulbek_dev.clara_app.view.utils.visible
 
 class NewReservationActivity : AppCompatActivity() {
 
-    private lateinit var binding: NewReservationLayoutBinding
+    private lateinit var mainActivityBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = NewReservationLayoutBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        mainActivityBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mainActivityBinding.root)
+
+        mainActivityBinding.contentFrameLayout.visible(true)
+        mainActivityBinding.bottomNavigationBar.visible(false)
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.content_frame_layout, NewReservationFragment())
+            commit()
+        }
     }
 }

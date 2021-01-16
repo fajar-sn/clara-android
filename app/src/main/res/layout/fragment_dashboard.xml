@@ -50,14 +50,15 @@
 
     </RelativeLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dashboard_top_relative_layout" >
 
-        <RelativeLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:background="@drawable/white_rounded_box" >
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -251,7 +252,7 @@
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginVertical="15dp"
                 android:layout_below="@id/status_table_layout"
-                android:text="@string/active_reservation"
+
                 android:textColor="@color/blue"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -260,13 +261,13 @@
                 android:id="@+id/dashboard_reservation_recycler_view"
                 android:layout_below="@id/active_reservation_text_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 tools:listitem="@layout/reservation_card" />
 
-        </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </RelativeLayout>

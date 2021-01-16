@@ -36,6 +36,7 @@ class DashboardFragment : BaseFragment<ReservationsViewModel, FragmentDashboardB
                     header = ReservationsLoadStateAdapter { adapter.retry() },
                     footer = ReservationsLoadStateAdapter { adapter.retry() }
             )
+//            dashboardReservationRecyclerView.isNestedScrollingEnabled = false
 //            buttonRetry.setOnClickListener { adapter.retry() }
         }
 

@@ -1,272 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:id="@+id/layoutButton1">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_weight="2"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/layoutButton2"
-        android:layout_below="@id/layoutButton1">
+        android:background="?attr/colorPrimaryDark"
+        android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/profile_title_textview"
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="19dp"
-            android:text="New Reservation"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:layout_marginVertical="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/new_reservation"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="26sp" />
 
-        <LinearLayout
-            android:layout_width="600dp"
-            android:layout_height="570dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_rounded_box"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/asset_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Asset"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="355dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:backgroundTint="@color/white" />
-
-            <TextView
-                android:id="@+id/quantity_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Quantity"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextNumberSigned"
-                android:layout_width="355dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:ems="14"
-                android:inputType="numberSigned" />
-
-            <TextView
-                android:id="@+id/beginDate_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Begin Date"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextDate"
-                android:layout_width="355dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:ems="14"
-                android:inputType="date" />
-
-            <TextView
-                android:id="@+id/returnDate_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Return Date"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextDate2"
-                android:layout_width="355dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:ems="14"
-                android:inputType="date" />
-
-            <TextView
-                android:id="@+id/description_label_tv"
-                android:layout_width="355dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="328dp"
-                android:text="Description"
-                android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine"
-                android:layout_width="355dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:ems="14"
-                android:gravity="start|top"
-                android:inputType="textMultiLine" />
-
-            <Button
-                android:id="@+id/reserve_btn"
-                android:layout_width="355dp"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="328dp"
-                android:backgroundTint="@color/blue"
-                android:text="RESERVE"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </RelativeLayout>
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_weight="0"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_below="@id/layoutButton2"
-        android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/asset_label_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/asset"
+                    android:textColor="?attr/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/home_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="340dp"
-            android:layout_marginBottom="33dp"
-            android:src="@drawable/home" />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/asset_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:backgroundTint="?attr/colorPrimary" />
 
-        <TextView
-            android:id="@+id/home_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="341dp"
-            android:layout_marginBottom="12dp"
-            android:text="Home"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/quantity_label_tv"
+                    android:labelFor="@+id/editTextNumberSigned"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/quantity"
+                    android:textColor="?attr/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/reservation_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="239dp"
-            android:layout_marginBottom="33dp"
-            android:src="@drawable/reservation" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/quantity_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:inputType="number"
+                    android:autofillHints="@string/quantity" />
 
-        <TextView
-            android:id="@+id/reservation_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="220dp"
-            android:layout_marginBottom="12dp"
-            android:text="Reservation"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/beginDate_label_tv"
+                    android:labelFor="@+id/begin_date_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/begin_date"
+                    android:textColor="?attr/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/asset_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="128dp"
-            android:layout_marginBottom="33dp"
-            android:src="@drawable/asset" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/begin_date_edit_text"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:inputType="date"
+                    android:autofillHints="@string/begin_date" />
 
-        <TextView
-            android:id="@+id/asset_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="195dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="131dp"
-            android:layout_marginBottom="12dp"
-            android:text="Asset"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/returnDate_label_tv"
+                    android:labelFor="@+id/return_date_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/return_date"
+                    android:textColor="?attr/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/profile_iv"
-            android:layout_width="43dp"
-            android:layout_height="33dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="38dp"
-            android:layout_marginBottom="34dp"
-            android:src="@drawable/profile" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/return_date_edit_text"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:inputType="date"
+                    android:autofillHints="@string/return_date" />
 
-        <TextView
-            android:id="@+id/profile_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="12dp"
-            android:text="Profile"
-            android:textColor="@color/blue"
-            android:textSize="15sp" />
-    </RelativeLayout>
-</LinearLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/description_label_tv"
+                    android:labelFor="@+id/description_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/description"
+                    android:textColor="?attr/colorPrimaryDark" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/description_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="5"
+                    android:autofillHints="@string/description" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reserve_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:backgroundTint="?attr/colorPrimaryDark"
+                    android:text="@string/reserve"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorPrimary" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
+

@@ -12,7 +12,17 @@ data class History (
         @SerializedName("datetime")
         val datetime : String,
 
+//        val _id : Any // FIX LATER, whether fix it into _id class with oid or fix the backend to return string of id
+) {
         @Expose
         @SerializedName("_id")
-        val _id : Any // FIX LATER, whether fix it into _id class with oid or fix the backend to return string of id
-)
+        lateinit var id: Any
+
+        constructor(
+                id: Any,
+                status : String,
+                datetime : String
+        ): this(status, datetime) {
+                this.id = id
+        }
+}

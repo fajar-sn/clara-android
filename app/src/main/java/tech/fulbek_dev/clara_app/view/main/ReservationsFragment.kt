@@ -1,5 +1,6 @@
 package tech.fulbek_dev.clara_app.view.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -45,7 +46,8 @@ class ReservationsFragment : BaseFragment<ReservationsViewModel, ListFragmentBin
             buttonRetry.setOnClickListener { adapter.retry() }
 
             addFloatActionButton.setOnClickListener {
-                requireActivity().startNewActivity(NewReservationActivity::class.java)
+                val intent = Intent(context, NewReservationActivity::class.java)
+                startActivity(intent)
             }
         }
 
