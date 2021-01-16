@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/splash_screen_layout"
+    android:id="@+id/intro_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/splash_screen_iv"
+        android:id="@+id/intro_image_view"
         android:layout_width="match_parent"
         android:layout_height="353dp"
         android:src="@drawable/splash_screen_img"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/about_us_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_outline_info_24"
         android:text="@string/about_us"
         android:textSize="25sp"
         android:textColor="?attr/colorPrimaryDark"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/splash_screen_iv"
+        app:layout_constraintTop_toBottomOf="@+id/intro_image_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

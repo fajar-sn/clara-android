@@ -1,24 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginHorizontal="16dp" >
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="16dp"
-        android:text="@string/about_us"
-        android:textSize="32sp"
-        android:gravity="center_horizontal" />
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-        
+        <TextView
+            android:id="@+id/about_us_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="32sp"
+            android:text="@string/about_us"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal" />
+
+        <ImageView
+            android:id="@+id/clara_logo"
+            android:src="@drawable/clara_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/description_clara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textSize="20sp"
+            android:text="@string/description_clara"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/about_page_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dev_team_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:text="@string/dev_team"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ilyas"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:src="@drawable/ilyas" />
+
+                        <TextView
+                            android:id="@+id/name_ilyas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Ilyas" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/fajar"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:src="@drawable/fajar" />
+
+                        <TextView
+                            android:id="@+id/name_fajar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Fajar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/fadhli"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:src="@drawable/fadhli" />
+
+                        <TextView
+                            android:id="@+id/name_fadhli"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Fadhli" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/indra"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/indra" />
+
+                        <TextView
+                            android:id="@+id/name_indra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Indra" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/tiara"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/tiara" />
+
+                        <TextView
+                            android:id="@+id/name_tiara"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Tiara" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/gebriela"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gebriela" />
+
+                        <TextView
+                            android:id="@+id/name_gebriela"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Gebriela" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sponsorship_layout"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sponsor_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/sponsorship"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/sponsors_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/sponsor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supported_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/supported"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/supporters_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/support" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/all_mentor_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Supervisor and Mentor" />
+
+        <TextView
+            android:id="@+id/all_mentor_name"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:lineHeight="25dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
 
     </LinearLayout>
-
-
 </ScrollView>

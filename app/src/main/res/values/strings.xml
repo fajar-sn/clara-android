@@ -39,4 +39,35 @@
     <string name="reserve">RESERVE</string>
     <string name="new_reservation">New Reservation</string>
     <string name="about_us">About us</string>
+    <string name="description_clara">CLARA (College Asset Reservation Assistant) adalah aplikasi yang dapat
+        memudahkan Anda dalam melakukan reservasi asset, mengetahui status asset,
+        hingga  mendapatkan izin atau approval dari kampus Anda tanpa harus berinteraksi
+        secara langsung dengan pihak yang terkait.</string>
+    <string name="dev_team">Developer Team</string>
+    <string name="sponsorship">Sponshorship</string>
+    <string name="supported">Supported by</string>
+    <string name="all_mentor">Umi Saadah \n Desy Intan Permatasari - Andhik Ampuh Yunanto - Maulidan Bagus Afridian Rasyid
+        - Willy Achmat Fauzi - Verent Flourencia Irene - Mayshella Ainun Wakhidah - Andika Ahmad Ramadhan - Fandi Ahmad
+        - Ardian Kristya Pratama - Angga Pradipta Kurnia Putra - Muhammad Alif Pradipta ADP - Rafly Arief Kanza
+        - Ahmad Jarir At Thobari - Ajie Dibyo Respati - Achmad Zulkarnain - Arie Affianto - Tegar Imansyah</string>
+    <string-array name="mentors">
+        <item>Umi Saadah</item>
+        <item>Desy Intan Permatasari</item>
+        <item>Andhik Ampuh Yunanto</item>
+        <item>Maulidan Bagus Afridian Rasyid</item>
+        <item>Willy Achmat Fauzi</item>
+        <item>Verent Flourencia Irene</item>
+        <item>Mayshella Ainun Wakhidah</item>
+        <item>Andika Ahmad Ramadhan</item>
+        <item>Fandi Ahmad</item>
+        <item>Ardian Kristya Pratama</item>
+        <item>Angga Pradipta Kurnia Putra</item>
+        <item>Muhammad Alif Pradipta ADP</item>
+        <item>Rafly Arief Kanza</item>
+        <item>Ahmad Jarir At Thobari</item>
+        <item>Ajie Dibyo Respati</item>
+        <item>Achmad Zulkarnain</item>
+        <item>Arie Affianto</item>
+        <item>Tegar Imansyah</item>
+    </string-array>
 </resources>
